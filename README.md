@@ -49,7 +49,7 @@ python oversampling_v1.py -m SMOTENC -in mixed_data.csv -out SMOTENC.csv -cf 1 4
 python oversampling_v1.py -m RandomOverSampler -in numeric_data.csv -out ROS_dict.csv -ss "{0: 200, 1: 300}"
 python oversampling_v1.py -m RandomOverSampler -in numeric_data.csv -out ROS_float.csv -ss 0.5
 ```
-> • dict 可指定每個類別要補到的樣本數，例如 `-ss "{0: 200, 1: 300}"`。
+>dict 可指定每個類別要補到的樣本數，例如 `-ss "{0: 200, 1: 300}"`
 
 ## ⚠️ 注意事項
 - 目前輸入檔案的格式為 .csv，且最後一欄為標籤。
