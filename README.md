@@ -29,7 +29,7 @@ python oversampling_v1.py -m <方法名稱> -in <輸入CSV檔案> -out <輸出CS
 - `-cf, --categorical_features`：SMOTENC 專用，指定類別特徵欄位（如 -cf 1 4）
 
 ### 範例
-#### 數值型資料（SMOTE）
+#### 數值型資料
 ```bash
 python oversampling_v1.py -m SMOTE -in numeric_data.csv -out SMOTE.csv
 ```
