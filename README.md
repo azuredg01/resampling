@@ -1,9 +1,9 @@
 # oversampling_v1.py 使用說明
 
-## 主要功能
+## ✨ 主要功能
 本腳本可針對不平衡資料集進行多種 over-sampling（過採樣）方法，支援 imbalanced-learn 套件的多種演算法。
 
-## 支援方法
+## 🧩 支援方法
 - 數值型：
   - RandomOverSampler
   - SMOTE
@@ -16,7 +16,7 @@
 - 混合型（數值+類別）：
   - SMOTENC（需指定類別特徵）
 
-## 基本用法
+## 🛠️ 基本用法
 ```bash
 python oversampling_v1.py -m <方法名稱> -in <輸入CSV檔案> -out <輸出CSV檔案> [其他參數]
 ```
@@ -49,9 +49,9 @@ python oversampling_v1.py -m SMOTENC -in mixed_data.csv -out SMOTENC.csv -cf 1 4
 python oversampling_v1.py -m RandomOverSampler -in numeric_data.csv -out ROS_dict.csv -ss "{0: 200, 1: 300}"
 python oversampling_v1.py -m RandomOverSampler -in numeric_data.csv -out ROS_float.csv -ss 0.5
 ```
-> dict 可指定每個類別要補到的樣本數，例如 `-ss "{0: 200, 1: 300}"`。
+> • dict 可指定每個類別要補到的樣本數，例如 `-ss "{0: 200, 1: 300}"`。
 
-## 注意事項
+## ⚠️ 注意事項
 - 目前輸入檔案的格式為 .csv，且最後一欄為標籤。
 - 輸入資料必須為二維 (n_samples, n_features)，不可為一維或僅一欄。
 - SMOTENC 必須指定 `-cf` 參數。
