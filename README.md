@@ -25,36 +25,36 @@ python oversampling_v1.py -m <方法名稱> -in <輸入CSV檔案> -out <輸出CS
 - `-m, --method`：過採樣方法名稱（必填）
 - `-in, --input`：輸入 .csv 檔案（必填，最後一欄為標籤，且資料必須為二維 (n_samples, n_features)）
 - `-out, --output`：輸出 .csv 檔案（必填）
-- `-ss, --sampling_strategy`：採樣策略 (要採樣至多少樣本數)（可選，預設 auto，可為 float、dict、str）
+- `-ss, --sampling_strategy`：採樣策略 (要補至多少樣本數)（可選，預設 auto，可為 float、dict、str）
 - `-cf, --categorical_features`：SMOTENC 專用，指定類別特徵欄位（如 -cf 1 4）
 
 ### 範例
 #### 數值型資料（SMOTE）
 ```bash
-python oversampling_v1.py -m SMOTE -in numeric_data.csv -out SMOTE.csv -ss {0: 100, 1: 150}
+python oversampling_v1.py -m SMOTE -in numeric_data.csv -out SMOTE.csv
 ```
 
 #### 類別型資料（SMOTEN）
 ```bash
-python oversampling_v1.py -m SMOTEN -in categorical_data.csv -out SMOTEN.csv -ss {0: 100, 1: 150}
+python oversampling_v1.py -m SMOTEN -in categorical_data.csv -out SMOTEN.csv
 ```
 
-#### 混合型資料（SMOTENC，需指定類別特徵）
+#### 混合型資料（SMOTENC，需指定類別特徵的欄位 -cf）
 ```bash
-python oversampling_v1.py -m SMOTENC -in mixed_data.csv -out SMOTENC.csv -cf 1 4 -ss {0: 100, 1: 150}
+python oversampling_v1.py -m SMOTENC -in mixed_data.csv -out SMOTENC.csv -cf 1 4
 ```
 
-#### 指定採樣數量（RandomOverSampler 支援 int，SMOTE 請用 float 或 dict）
+#### 指定採樣數量（-ss，預設 auto）
 ```bash
-python oversampling_v1.py -m RandomOverSampler -in numeric_data.csv -out ROS_200.csv -ss 200
-python oversampling_v1.py -m SMOTE -in numeric_data.csv -out SMOTE_05.csv -ss 0.5
+python oversampling_v1.py -m RandomOverSampler -in numeric_data.csv -out ROS_dict.csv -ss "{0: 200, 1: 300}"
+python oversampling_v1.py -m RandomOverSampler -in numeric_data.csv -out ROS_float.csv -ss 0.5
 ```
+> dict 可指定每個類別要補到的樣本數，例如 `-ss "{0: 200, 1: 300}"`。
 
 ## 注意事項
-- 輸入檔案需為 .csv 格式，且最後一欄為標籤。
+- 目前輸入檔案的格式為 .csv，且最後一欄為標籤。
 - 輸入資料必須為二維 (n_samples, n_features)，不可為一維或僅一欄。
 - SMOTENC 必須指定 `-cf` 參數。
-- SMOTE/ADASYN/BorderlineSMOTE/SVMSMOTE/KMeansSMOTE/SMOTENC 的 `sampling_strategy` 不支援 int，請用 float、dict 或 str。
 
 ---
 
