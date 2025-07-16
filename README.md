@@ -60,7 +60,6 @@ python oversampling_v1.py -m RandomOverSampler -in numeric_data.csv -out ROS_flo
 ## ⚠️ 注意事項
 - 目前輸入檔案的格式為 .csv，且最後一欄為標籤。
 - 輸入資料必須為二維 (n_samples, n_features)，不可為一維或僅一欄。
-- SMOTENC 必須指定 `-cf` 參數。
 
 ---
 
