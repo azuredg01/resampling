@@ -39,12 +39,12 @@ python oversampling_v1.py -m SMOTE -in numeric_data.csv -out SMOTE.csv
 python oversampling_v1.py -m SMOTEN -in categorical_data.csv -out SMOTEN.csv
 ```
 
-#### 混合型資料（SMOTENC，需指定類別特徵的欄位 -cf）
+#### 混合型資料（SMOTENC，需指定類別特徵的欄位 `-cf`）
 ```bash
 python oversampling_v1.py -m SMOTENC -in mixed_data.csv -out SMOTENC.csv -cf 1 4
 ```
 
-#### 指定採樣數量（-ss，預設 auto）
+#### 指定採樣數量（`-ss`，預設 auto）
 ```bash
 python oversampling_v1.py -m RandomOverSampler -in numeric_data.csv -out ROS_dict.csv -ss "{0: 200, 1: 300}"
 python oversampling_v1.py -m RandomOverSampler -in numeric_data.csv -out ROS_float.csv -ss 0.5
