@@ -58,5 +58,5 @@ python oversampling_v1.py -m SMOTE -in numeric_data.csv -out SMOTE_05.csv -ss 0.
 
 ---
 
-如需更多細節，請參考程式內註解或 [imbalanced-learn 官方文件](https://imbalanced-learn.org/stable/over_sampling.html)。
+如需更多細節，請參考程式內註解或 [imbalanced-learn 官方文件](https://imbalanced-learn.org/stable/references/over_sampling.html)。
 
