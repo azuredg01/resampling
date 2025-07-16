@@ -25,7 +25,7 @@ python oversampling_v1.py -m <方法名稱> -in <輸入CSV檔案> -out <輸出CS
 - `-m, --method`：過採樣方法名稱（必填）
 - `-in, --input`：輸入 .csv 檔案（必填，最後一欄為標籤，且資料必須為二維 (n_samples, n_features)）
 - `-out, --output`：輸出 .csv 檔案（必填）
-- `-ss, --sampling_strategy`：採樣策略（可選，預設 auto，可為 float、dict、str）
+- `-ss, --sampling_strategy`：採樣策略 (要採樣至多少樣本數)（可選，預設 auto，可為 float、dict、str）
 - `-cf, --categorical_features`：SMOTENC 專用，指定類別特徵欄位（如 -cf 1 4）
 
 ### 範例
