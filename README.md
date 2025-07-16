@@ -1,7 +1,7 @@
 # oversampling_v1.py 使用說明
 
 ## ✨ 主要功能
-本腳本可針對不平衡資料集進行多種 over-sampling（過採樣）方法，支援 imbalanced-learn 套件的多種演算法。
+可針對不平衡資料集進行多種 over-sampling
 
 ## 📦 需要安裝的套件
 請先安裝以下 Python 套件：
